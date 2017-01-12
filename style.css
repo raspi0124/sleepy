@@ -1,0 +1,517 @@
+/*
+Theme Name: twentyseventeen-child-public
+Template: twentyseventeen
+*/
+@import url("../twentyseventeen/style.css");
+
+.site-branding .site-title {
+    /* サイトのメインタイトル */
+  font-size: 2.1rem;
+  font-weight: 400;
+  letter-spacing: -0.1rem;
+    /* 文字間を少し寄せる */
+  ;
+}
+
+.site-description {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.entry-content h1 {
+         /* 実際には「見出し1」は使用しない */
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.entry-content h2 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  border-bottom: thin solid #6495ed;
+}
+
+.entry-content h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-left: 4px solid #6495ed;
+  padding-left: 0.5rem;
+}
+
+body:not(.custom-background-image)::before {
+  border-top: medium solid #1486B7;
+       /* サイトトップに青線 */
+  ;
+}
+
+.widget {
+  border-style: none;
+         /* お葬式みたいな仕切り線を消す。*/
+  font-size: 1rem;
+            /* ウィジェット内のフォントが小さ過ぎ */
+  margin-bottom: 0.5rem;
+      /* ウィジェットどおしの間隔が広過ぎ */
+  ;
+}
+
+.widget .widget-title {
+  border-bottom: solid thin #6495ed !important;
+   /* タイトルに下青線 */
+  padding-bottom: 0.4rem;
+                         /* 下線までの距離 */
+  margin-bottom: 0.8rem;
+                /* 最初のエントリーまでの距離 */
+  font-weight: 100;
+                   /* フォントが大きすぎるので */
+  font-size: 1rem;
+}
+
+.widget ul {
+  list-style-type: none;
+      /* リストのマーカーを消す */
+  margin: 0;
+                  /* 注意。サブカテゴリーのインデントも消える */
+  padding: 0;
+}
+
+.widget .cat-item {
+  border-bottom: 1px solid #dcdcdc;
+       /* カテゴリー間に線 */
+  padding: 0.3rem 0rem;
+       /* カテゴリー間が狭いので */
+  ;
+}
+
+.widget .children .cat-item {
+  border-bottom: none;
+        /* 親子カテゴリーの間の線はなし */
+  padding: 0.3rem 0rem;
+       /* カテゴリー間が狭いので */
+  ;
+}
+
+.widget .recentcomments {
+  border-bottom: 1px solid #dcdcdc;
+   /* コメントの間に線 */
+  padding: 0.5rem 0rem;
+               /* コメントと線の間 */
+  line-height: 125%;
+                  /* 行間を狭める */
+  ;
+}
+
+.post-navigation,
+.post-navigation .post-title,
+.post-navigation div + div {
+  border-style: none;
+     /* お葬式みたいな線を潰す */
+  font-size: 1.0rem;
+      /* 前や次が小さいのでまとめて同じ大きさに */
+  font-weight: 400;
+}
+
+div.nav-next {
+  text-align: right;
+                      /* 「次」は右寄せ */
+  ;
+}
+
+.post-navigation a,
+.post-navigation .meta-nav {
+  padding: 0rem;
+                          /* 行間をつぶして狭く */
+  line-height: 1;
+  margin: 0rem;
+}
+
+nav.navigation {
+  border-top: medium solid #6495ed;
+       /* 領域の上下に青線 */
+  border-bottom: thin solid #6495ed;
+  padding: 0.5rem 0;
+                      /* 線との距離 */
+  ;
+}
+
+.entry-title {
+      font-size: 1.4rem;
+      font-weight: 400;
+                     /* 少し軽くする。元は700 */
+    padding-top: 1rem;
+      border-bottom: thin solid #6495ed;
+    /* 青い下線 */
+    padding-bottom: 0.5rem;
+               /* 青下線とタイトルの間の距離 */
+    margin-bottom: 0.5rem;
+                /* 青下線の下の距離 */;
+}
+
+body:not(.search-results) article:not(.type-page) .entry-content {
+      width: 77%;
+                           /* 本文の幅 */;
+}
+
+body:not(.search-results) .cat-links, 
+body:not(.search-results) .tags-links, 
+body:not(.search-results) article:not(.sticky) .posted-on {
+      display: inline;
+      /* カテゴリー等をタイトル下に一行に並べたいので */;
+}
+
+.entry-footer-home {
+      font-size: 1.0rem;
+      margin-top: 0rem;
+      margin-bottom: 0.5rem;
+        /* エントリーの日付やカテゴリーと本文の間 */;
+}
+
+.entry-footer-home .posted-on,
+.entry-footer-home .cat-links {
+      margin-right: 0.5rem;
+         /* 日付とカテゴリーの間 */;
+}
+
+.updated:not(.published) {
+      display: inline;
+              /* 更新日。hide されているので表示する */;
+}
+
+.post-category {
+                  /* タイトル下のカテゴリーは青色丸四角で囲む */
+    padding: 0.1rem 0.4rem;
+      border: thin solid #6495ed;
+      border-radius: 0.3rem;
+      color: #6495ed;
+}
+
+input[type="search"] {
+            /* 検索ボックス */
+    padding: 0.3rem 0.5rem;
+      font-size: 0.9rem;
+}
+
+.search-submit::before {
+          /* 検索ボックスの右側の虫眼鏡アイコン */
+    font-size: 18px;
+              /* アイコンの大きさ */
+    line-height: 35px;
+            /* アイコンの上部からの距離 */;
+}
+
+//powered by wordpress の文を削除
+.site-footer .site-title:after {
+  content: "";
+}
+
+span.credit-link {
+  display: none;
+}
+
+.site-info {
+  display: none;
+}
+
+/* SNSフォローボタン上テキストのCSS指定 */
+.sns-txt {
+  display: inline-block;
+  margin: 10px 0;
+  width: 100%;
+  text-align: center;
+  line-height: 2em;
+  font-size: 13px;
+ /* 文字の大きさを変える時は変更する */
+  border-top: 1px solid #3b3b3b;
+  /* 上のボーダーの色や太さを変える時は変更 */
+  border-bottom: 1px solid #3b3b3b;
+  /* 下のボーダーの色や太さを変える時は変更 */
+  ;
+}
+
+/* SNSフォローボタン枠のCSS指定 */
+.sns-follow {
+  display: table;
+  width: 100%;
+  margin: 0 auto 32px;
+}
+
+/* SNSフォローボタンのCSS指定 */
+
+.sns-follow a {
+  display: table-cell;
+  font-size: 35px;
+ /* SNSマークの大きさを変えたい場合は変更する */
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  width: 25%;
+ /* SNSを増やす場合は変更する。 合計で100%以下になるように。 */
+  height: 48px;
+ /* ボックスの高さを変えたい場合は変更する */
+  layout-grid-line: 50px;
+ /* 変更しない IE7以下対応  */
+  color: #fff;
+ /* SNSロゴの色を変えたい場合は変更する */
+  ;
+}
+
+.sns-follow .hatena-button {
+  transition: 1s ease;
+  background: #54575d;
+}
+
+.sns-follow .twitter-button {
+  transition: 1s ease;
+  background: #5db9ff;
+  /* 背景色を変更したい場合は変更する */
+  ;
+}
+
+.sns-follow .facebook-button {
+  transition: 1s ease;
+  background: #395eaf;
+  /* 背景色を変更したい場合は変更する */
+  ;
+}
+
+.sns-follow .feedly-button {
+  transition: 1s ease;
+  background: #84c34c;
+  /* 背景色を変更したい場合は変更する */
+  ;
+}
+
+/* SNSフォローボタンオーバーフロー時のCSS指定 */
+
+.sns-follow .hatena-button:hover {
+  transition: .3s ease;
+  color: #3d3f44;
+ /* 背景色を変更したい場合は変更する */
+  background: #fff;
+}
+
+.sns-follow .twitter-button:hover {
+  transition: .3s ease;
+  color: #55acee;
+ /* 背景色を変更したい場合は変更する */
+  background: #fff;
+}
+
+.sns-follow .facebook-button:hover {
+  transition: .3s ease;
+  color: #305097;
+ /* 背景色を変更したい場合は変更する */
+  background: #fff;
+}
+
+.sns-follow .feedly-button:hover {
+  transition: .3s ease;
+  color: #75ad43;
+ /* 背景色を変更したい場合は変更する */
+  background: #fff;
+}
+
+ul.web-logo-font {
+  padding: 0;
+  font-family: sans-serif;
+}
+
+ul.web-logo-font li {
+  float: left;
+  list-style-type: none;
+  margin-right: 5px;
+  padding-right: 5px;
+}
+
+ul.web-logo-font li a {
+  font-size: 40px;
+  text-decoration: none;
+  color: #000;
+}
+
+ul.web-logo-font li a:hover {
+  opacity: 0.6;
+}
+
+/*強調するためにあらためて記入しただけでまとめて書いてもOK*/
+ul.web-logo-font li a {
+  color: white;
+  padding: 7px;
+  border-radius: 5px;
+}
+
+/*背景色を設定*/
+ul.web-logo-font a.twitter-btn-icon-link {
+  background-color: #55ACEE;
+}
+
+ul.web-logo-font a.facebook-btn-icon-link {
+  background-color: #3C5A99;
+}
+
+ul.web-logo-font a.google-plus-btn-icon-link {
+  background-color: #DD4B39;
+}
+
+ul.web-logo-font a.hatena-btn-icon-link {
+  background-color: #3C7DD1;
+}
+
+ul.web-logo-font a.pocket-btn-icon-link {
+  background-color: #EE4257;
+}
+
+ul.web-logo-font a.line-btn-icon-link {
+  background-color: #00C300;
+}
+
+ul.web-logo-font a.feedly-btn-icon-link {
+  background-color: #2BB24C;
+}
+
+/************************************
+** 最近のコメントウィジェットのスタイル
+************************************/
+dl.recent-comments {
+  width: 100%;
+  margin: 20px auto;
+}
+
+dl.recent-comments dt {
+  text-align: left;
+  clear: left;
+  float: left;
+  width: 46px;
+  white-space: nowrap;
+  margin-top: 3px;
+}
+
+dl.recent-comments dd {
+  margin-left: 0;
+  margin-bottom: 20px;
+}
+
+dl.recent-comments dd .recent-comment-author {
+  font-weight: bold;
+}
+
+dl.recent-comments dd .recent-comment-content {
+  font-size: 14px;
+}
+
+
+/*補足情報アイコンの実装 詳しくは http://nelog.jp/expanded-information-css を見ること*/
+.information,
+.question {
+  background-color: #F4F3EB;
+  padding: 20px 20px 20px 72px;
+  border-radius: 4px;
+  position: relative;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.information::before,
+.question::before {
+  font-family: "FontAwesome";
+  font-size: 50px;
+  position: absolute;
+  top: 20px;
+  left: 13px;
+  color: #EAE3B4;
+}
+
+.information::before {
+  content: 'f05a';
+}
+
+.question::before {
+  content: 'f059';
+}
+
+@media screen and (max-width:440px) {
+  .information,
+  .question {
+    padding: 10px;
+  }
+
+  .information::before,
+  .question::before {
+    display: none;
+  }
+}
+
+
+
+strong, em, b { padding : 0 0.2em ; }
+
+
+
+.breadcrumb {
+    padding: 20px;
+    border: #1486B7 dashed 1px;
+    background: #fff;
+}
+
+
+.footer-copyright {
+    background-color: #1486B7;
+    color: #fff;
+    margin: 2em 0;
+    padding: 2em;
+    position: relative;
+}
+.footer-copyright::before {
+    content: "";
+    border-color: #1486B7 #fff #fff #1486B7;
+    border-style: solid;
+    border-width: 0 0 24px 24px;
+    bottom: 0;
+    position: absolute;
+    right: 0;
+}
+
+.thumbnail-toppost {
+    padding-bottom:20px;
+}  
+
+/* 新着記事 */
+#new-entries{
+  line-height:150%;
+  margin-bottom:20px;
+}
+
+#new-entries h4{
+  margin-bottom:15px;
+}
+
+#new-entries .new-entry{
+  clear:both;
+}
+
+#new-entries .new-entry-thumb {
+  float: left;
+  margin-bottom:10px;
+  padding-bottom:5px;
+}
+
+#new-entries .new-entry-content {
+  margin-left:85px;
+  margin-bottom:10px;
+}
+
+/* Fontawesome */
+.fa-angle-right:before {
+content: "f105";
+}
+
+/* Force header image to full height */
+#custom-header-media {
+  height: 100vh;
+  max-height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+
+
+//Theme by Raspi日記
