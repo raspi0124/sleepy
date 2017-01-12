@@ -78,6 +78,18 @@ function get_this_site_domain(){
 }
 
 
+//Add Only home sidebar
+
+register_sidebar( array(
+	'name' => __( 'Only Home Sidebar', 'sleep' ),
+	'id' => 'home_sidebar',
+	'description' => __( 'This sidebar will only show on frontage.', 'sleep' ),
+	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+	'after_widget' => '</aside>',
+	'before_title' => '<h3 class="widget-title">',
+	'after_title' => '</h3>',
+) );
+
 
 //Add Avater for Comments
 add_filter( 'avatar_defaults', 'newgravatar' );

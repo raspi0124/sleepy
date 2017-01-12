@@ -10,6 +10,18 @@
  * @version 1.0
  */
 
+
+<?PHP
+if (is_front_page()) {
+    echo "	<div id="home_sidebar" class="widget-area" role="complementary">
+    		<?php dynamic_sidebar( 'home_sidebar' ); ?>
+	</div>";
+}else {
+    echo "";
+}
+?>
+
+<?php
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 	return;
 }
@@ -18,3 +30,5 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 <aside id="secondary" class="widget-area" role="complementary">
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 </aside><!-- #secondary -->
+
+
