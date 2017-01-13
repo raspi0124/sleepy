@@ -10,7 +10,7 @@ register_sidebars(1,
   array(
   'name'=>'In Article',
   'id' => 'widget-in-article',
-  'description' => '<?php _e('This widget appears in front of the first H2 tag in the post', 'sleepy'); ?>',
+  'description' => __('This widget appears in front of the first H2 tag in the post', 'sleepy'),
   'before_widget' => '<div id="%1$s" class="widget-in-article %2$s">',
   'after_widget' => '</div>',
   'before_title' => '<div class="widget-in-article-title">',
@@ -26,8 +26,8 @@ function get_h2_included_in_body( $the_content ){
 }
 
 function add_widget_before_1st_h2($the_content) {
-  if ( is_single() && 
-       is_active_sidebar( 'widget-in-article' ) 
+  if ( is_single() &&
+       is_active_sidebar( 'widget-in-article' )
   ) {
     ob_start();
     dynamic_sidebar( 'widget-in-article' );
@@ -106,7 +106,7 @@ return $avatar_defaults;
 add_action( 'customize_register', 'theme_customize_register' );
 function theme_customize_register($wp_customize) {
     $wp_customize->add_section( 'sleepy_section', array(
-        'title'          =>'__('Settings for sleepy theme', 'sleepy')',
+        'title'          => __('Settings for sleepy theme', 'sleepy'),
         'priority'       => 100,
 	'label'		 => 'test',
     ));
@@ -116,7 +116,7 @@ $wp_customize->add_setting('sleepy_options[text01]', array(
 ));
 $wp_customize->add_control( 'sleepy_textfield', array(
     'settings' => 'sleepy_options[text01]',
-    'label' =>'__('enter the sentence you want to display after copyright', 'sleepy')',
+    'label' =>__('enter the sentence you want to display after copyright', 'sleepy'),
     'section' => 'sleepy_section',
     'type' => 'text',
 ));
@@ -125,7 +125,7 @@ $wp_customize->add_setting('sleepy_options[text02]', array(
 ));
 $wp_customize->add_control( 'sleepy_textfield2', array(
     'settings' => 'sleepy_options[text02]',
-    'label' =>'__('write the code you want to write in the header.', 'sleepy')',
+    'label' =>__('write the code you want to write in the header.', 'sleepy'),
     'section' => 'sleepy_section',
     'type' => 'text',
 ));
@@ -136,7 +136,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
     $wp_customize, 'sleepy_options[footer-color]',
     array(
         'settings' => 'sleepy_options[footer-color]',
-        'label' => '__('Footer background color', 'sleepy')',
+        'label' => __('Footer background color', 'sleepy'),
         'section' => 'sleepy_section',
 )));
 }
