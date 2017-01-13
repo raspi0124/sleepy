@@ -11,9 +11,8 @@
  */
 
 
-<?PHP
 if (is_front_page()) {
-    echo "	<div id="home_sidebar" class="widget-area" role="complementary">
+    echo "	<div id='home_sidebar' class='widget-area' role='complementary'>
     		<?php dynamic_sidebar( 'home_sidebar' ); ?>
 	</div>";
 }else {
@@ -30,5 +29,3 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 <aside id="secondary" class="widget-area" role="complementary">
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 </aside><!-- #secondary -->
-
-
