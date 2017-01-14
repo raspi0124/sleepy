@@ -17,9 +17,13 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
-<?php
-$options =  get_option('sleepy_options');
+<?php if ( get_theme_mod( 'sleepy_option' ) ) : ?>
+<?php $options =  get_option('sleepy_options');
 echo esc_html($options['text02']);?>
+
+<?php else : ?>
+	
+<?php endif; ?>
 
 <?php wp_head(); ?>
 </head>
