@@ -1,6 +1,8 @@
 <?php
 
+//load css
 
+wp_enqueue_style( '/inc/css/font-awesome.min.css', get_stylesheet_uri() );
 
 
 ///////////////////////////////////////
