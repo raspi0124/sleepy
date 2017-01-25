@@ -17,9 +17,13 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
-<?php if ( get_option( 'sleepy_option' ) ) : ?>
-<?php $options =  get_option('sleepy_options');
-echo esc_html($options['text02']);?>
+<?php 
+if ( get_option( 'sleepy_options' ) ) :
+	$options =  get_option( 'sleepy_options' );
+	if ( ! empty( $options['text02'] ) ) {
+		echo esc_html( $options['text02'] );
+	}
+?>
 
 <?php else : ?>
 	
